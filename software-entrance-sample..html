@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Software Entreance Exam Sample</title>
+    <meta content="Sample SAT Questions for Sofwtare Engineering Entrance Exam at Addis Ababa Science and Technology University" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Bootslander - v4.7.1
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <style>
+        .answers {
+            margin-bottom: 20px;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        .answers label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            font-size: 18px;
+            background-image: linear-gradient(to right, #01A8FF, #9500D0);
+            color: #fff;
+            border: 0px;
+            border-radius: 9px;
+            padding: 12px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        
+        button:hover {
+            background-color: #38a;
+        }
+        
+        .slide {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        
+        .active-slide {
+            opacity: 1;
+            z-index: 2;
+        }
+        
+        .quiz-container {
+            font-weight: bold;
+            position: relative;
+            position: relative;
+            height: 200px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        
+        @font-face {
+            font-family: customfont;
+            src: url(font/gotham_light.ttf);
+        }
+        
+        @font-face {
+            font-family: customfontbold;
+            src: url(font/gothambold.ttf);
+        }
+        
+        @font-face {
+            font-family: google;
+            src: url(font/google_sans.ttf);
+        }
+    </style>
+</head>
+
+<body style="font-family:customfont;">
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center ">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <div class="logo">
+                <h1><a href="index.html" style="font-size: 19px; font-family:customfontbold;"><span>AASTU INNOVATION</span></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#details">Blog</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#gallery">Gallery</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs Section ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Sample Questions</h2>
+                    <ol>
+                        <li><a href="index.html">Blog</a></li>
+                        <li>Software Exam</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Breadcrumbs Section -->
+
+        <section class="inner-page">
+            <div style="text-align: center;">
+                <h1>SAT Sample Questions</h1>
+                <div class="quiz-container">
+                    <div id="quiz"></div>
+                </div>
+                <button id="previous">Previous Question</button>
+                <button id="next">Next Question</button>
+                <button id="submit">Submit Quiz</button>
+                <div id="kk" style="visibility: hidden; text-align: center; margin-left: 50px; padding: 80px 70px;  width: max-content; border: 5px solid #d82d2d;">
+                    <p style="font-size: 30px; color: #01A8FF; font-family:customfontbold;">Your Result:</p>
+                    <div style="font-size: 25px; color: #01A8FF; font-family:customfontbold;" id="results"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <h3>Our social media</h3>
+
+                            <div class="social-links mt-3">
+                                <a href="https://twitter.com/aastu_edu" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="https://facebook.com/gemechis.m.elias" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="https://t.me/aastu_innovation" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="https://t.me/aastu_innovation" class="google-plus"><i class="bx bxl-telegram"></i></a>
+                                <a href="#" class="https://linkedin.cim//in/gemechis-elias"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://elearning.aastu.edu.et">Student Info</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://elibrary.aastu.edu.et">E-Learning</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://studentinfo.aastu.edu.et">E-Library</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Our Projects</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://play.google.com/store/apps/details?id=com.gemechiselias.aastu">AASTU STUDENTS APP</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="t.me/aastugallery">AASTU GALLERY</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="software-entrance.html">AASTU Software Entreance</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://play.google.com/store/apps/details?id=com.gemechiselias.universityinfo">UNIVERSITY INFO</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Mission</h4>
+                        <p>We are students at AASTU with a vision to create the platform that help students throughout thier academic duration. We will keep adding new innovation and updates on this page.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input style="background-image: linear-gradient(to right, #01A8FF, #9500D0);" type="submit" value="Subscribe">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>AASTU INNOVATION</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
+                Designed by <a href="https://t.me/realgemechis/">Gemechis Elias</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        (function() {
+            // Functions
+            function buildQuiz() {
+                // variable to store the HTML output
+                const output = [];
+
+                // for each question...
+                myQuestions.forEach(
+                    (currentQuestion, questionNumber) => {
+
+                        // variable to store the list of possible answers
+                        const answers = [];
+
+                        // and for each available answer...
+                        for (letter in currentQuestion.answers) {
+
+                            // ...add an HTML radio button
+                            answers.push(
+                                `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+                            );
+                        }
+
+                        // add this question and its answers to the output
+                        output.push(
+                            `<div class="slide">
+            <div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> ${answers.join("")} </div>
+          </div>`
+                        );
+                    }
+                );
+
+                // finally combine our output list into one string of HTML and put it on the page
+                quizContainer.innerHTML = output.join('');
+            }
+
+            function showResults() {
+
+                // gather answer containers from our quiz
+                const answerContainers = quizContainer.querySelectorAll('.answers');
+                document.getElementById('kk').style.visibility = "visible";
+                // keep track of user's answers
+                let numCorrect = 0;
+
+                // for each question...
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+
+                    // find selected answer
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                    // if answer is correct
+                    if (userAnswer === currentQuestion.correctAnswer) {
+                        // add to the number of correct answers
+                        numCorrect++;
+
+                        // color the answers green
+                        answerContainers[questionNumber].style.color = 'lightgreen';
+                    }
+                    // if answer is wrong or blank
+                    else {
+                        // color the answers red
+                        answerContainers[questionNumber].style.color = 'red';
+                    }
+                });
+
+                // show number of correct answers out of total
+                resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+            }
+
+            function showSlide(n) {
+                slides[currentSlide].classList.remove('active-slide');
+                slides[n].classList.add('active-slide');
+                currentSlide = n;
+                if (currentSlide === 0) {
+                    previousButton.style.display = 'none';
+                } else {
+                    previousButton.style.display = 'inline-block';
+                }
+                if (currentSlide === slides.length - 1) {
+                    nextButton.style.display = 'none';
+                    submitButton.style.display = 'inline-block';
+                } else {
+                    nextButton.style.display = 'inline-block';
+                    submitButton.style.display = 'none';
+                }
+            }
+
+            function showNextSlide() {
+                showSlide(currentSlide + 1);
+            }
+
+            function showPreviousSlide() {
+                showSlide(currentSlide - 1);
+            }
+
+            // Variables
+            const quizContainer = document.getElementById('quiz');
+            const resultsContainer = document.getElementById('results');
+            const submitButton = document.getElementById('submit');
+            const myQuestions = [{
+                    question: "Q1. How many three - digit numbers can be formed with the digits 1, 2 and 5",
+                    answers: {
+                        a: "6",
+                        b: "4",
+                        c: "12",
+                        d: "8"
+                    },
+                    correctAnswer: "a"
+                }, {
+                    question: "Q2. The Probability of tossing five coins with a result of three heads and two tails is 5/6. What are the favor of three heads and two tails?",
+                    answers: {
+                        a: "5/11",
+                        b: "5/21",
+                        c: "16/21"
+                    },
+                    correctAnswer: "a"
+                }, {
+                    question: "Q3. A 20km Marathons has 10 people entered. In how many different ways can the first, second and third place prizes be awarded",
+                    answers: {
+                        a: "360",
+                        b: "90",
+                        c: "720",
+                        d: "1080"
+                    },
+                    correctAnswer: "c"
+                },
+
+                {
+                    question: "Q4. If x and  y are integers whose least com-mon multiple is a perfect square and whose greatest common divisor is a prime number, which could represent the ordered pair (x , y)?",
+                    answers: {
+                        a: "(9, 1)",
+                        b: "(16, 25)",
+                        c: "(16, 3)",
+                        d: "(9, 2)",
+                        e: "((18, 4))"
+                    },
+                    correctAnswer: "e"
+                }, {
+                    question: "Q5. A population ofbacteria doubles every 2 hours. What is the percent increase after 4 hours?",
+                    answers: {
+                        a: "200",
+                        b: "150",
+                        c: "300",
+                        d: "1200",
+                    },
+                    correctAnswer: "c"
+                }, {
+                    question: "Q6. Six chairs are placed in a row to seat six people. How many different seating arrangements are possible iftwo ofthe people insist on sitting next to each other?",
+                    answers: {
+                        a: "47",
+                        b: "15",
+                        c: "420",
+                        d: "240",
+                    },
+                    correctAnswer: "d"
+                }, {
+                    question: "Q7. The product of 3 and 6 more than a certain number is 5 times that number. What is the number ?",
+                    answers: {
+                        a: "18",
+                        b: "9",
+                        c: "12",
+                        d: "45",
+                    },
+                    correctAnswer: "b"
+                }, {
+                    question: "Q8. The second derivative of F(x)=1/x + xlnx is",
+                    answers: {
+                        a: "F\'\'(x)=2+x/x^3",
+                        b: "F\'\'(x)=-2-4x/x",
+                        c: "F\'\'(x)=2+x^2/x^3",
+                        d: "F\'\'(x)=-7/2x^2",
+                    },
+                    correctAnswer: "c"
+                }, {
+                    question: "Q9. If A={1,3,5,7,9} and B={2,3,5,7} what is the intersection of A and B",
+                    answers: {
+                        a: "{3,5,7}",
+                        b: "{2,3,5,7}",
+                        c: "{2,3,5,7,9}",
+                        d: "{1,2,3,5,7,9}",
+                    },
+                    correctAnswer: "a"
+                }, {
+                    question: "Q10. Which of the following propositions is tautology",
+                    answers: {
+                        a: "(p v q)->q)",
+                        b: "p v (q->p)",
+                        c: "p v (p->q)",
+                        d: "p v (p->q)",
+                    },
+                    correctAnswer: "c"
+                },
+
+
+
+
+
+
+
+
+
+            ];
+
+            // Kick things off
+            buildQuiz();
+
+            // Pagination
+            const previousButton = document.getElementById("previous");
+            const nextButton = document.getElementById("next");
+            const slides = document.querySelectorAll(".slide");
+            let currentSlide = 0;
+
+            // Show the first slide
+            showSlide(currentSlide);
+
+            // Event listeners
+            submitButton.addEventListener('click', showResults);
+            previousButton.addEventListener("click", showPreviousSlide);
+            nextButton.addEventListener("click", showNextSlide);
+        })();
+    </script>
+</body>
+
+</html>
